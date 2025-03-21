@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PrivacyLens</title>
+  <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <button class="icon-btn"><img src="icons/Home.svg" alt="Home"></button>
+      <button class="icon-btn"><img src="icons/Analytics.svg" alt="Reports"></button>
+      <button class="icon-btn settings"><img src="icons/Settings.svg" alt="Settings"></button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <h1>PrivacyLens</h1>
+        <img src="icons/Shield.svg" alt="Shield Icon" class="logo">
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" id="urlInput" placeholder="Enter website URL...">
+        <button id="scanBtn"><img src="icons/Magnifying Glass.svg" alt="Search"></button>
+      </div>
+
+      <!-- Tracker Table -->
+      <table class="tracker-table">
+        <thead>
+          <tr>
+            <th>URL</th>
+            <th>Tracker Name</th>
+            <th>Category</th>
+            <th>Company</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamically filled via JS -->
+        </tbody>
+      </table>
+
+      <!-- Privacy Score -->
+      <div class="privacy-score">Overall Privacy Score: N/A</div>
+    </div>
+  </div>
+</body>
+</html>
