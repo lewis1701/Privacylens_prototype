@@ -1,15 +1,16 @@
+/* Base styles */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #D3D3D3;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     height: 100vh;
-  }
-  
-  .sidebar {
+}
+
+.sidebar {
     width: 70px;
     background-color: #1F2532;
     border-radius: 10px;
@@ -18,9 +19,9 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-  }
-  
-  .icon-btn {
+}
+
+.icon-btn {
     background: none;
     border: none;
     padding: 0;
@@ -28,96 +29,325 @@ body {
     height: 50px;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
-  .icon-btn:hover {
+}
+
+.icon-btn:hover {
     background-color: #A9A9A9;
-  }
-  
-  .icon-btn img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .main-content {
+}
+
+.icon-btn img {
+    width: 50px;
+    height: 50px;
+}
+
+.main-content {
     flex: 1;
     padding: 20px;
-  }
-  
-  .header {
+    overflow: hidden;
+}
+
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     margin-bottom: 15px;
-  }
-  
-  .header h1 {
+}
+
+.header h1 {
     font-size: 24px;
     color: #1F2532;
     margin: 0;
-  }
-  
-  .logo {
+}
+
+.logo {
     width: 40px;
     height: 40px;
-  }
-  
-  .search-bar {
+}
+
+.search-bar {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-  }
-  
-  .search-bar input {
+}
+
+.search-bar input {
     flex: 1;
     padding: 6px 10px;
     font-size: 14px;
     border: 2px solid #1F2532;
     height: 30px;
-  }
-  
-  .search-bar button {
+}
+
+.search-bar button {
     width: 40px;
     height: 30px;
     border: none;
     background: none;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
-  .search-bar button:hover {
+}
+
+.search-bar button:hover {
     background-color: #ADD8E6;
-  }
-  
-  .search-bar button img {
+}
+
+.search-bar button img {
     width: 20px;
     height: 20px;
-  }
-  
-  .tracker-table {
+}
+
+.tracker-table {
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 10px;
-  }
-  
-  .tracker-table th,
-  .tracker-table td {
+}
+
+.tracker-table th,
+.tracker-table td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-  }
-  
-  .privacy-score {
+}
+
+.privacy-score {
     font-weight: bold;
     color: #1F2532;
-  }
-  .settings{
+}
+
+.settings {
     justify-self: flex-end;
     position: relative;
     top: 80%;
-  }
+}
+
+.tracker-table th,
+.tracker-table td {
+    border-right: 1px solid #ccc;  /* Right-side column border */
+    padding: 10px;
+    text-align: left;
+}
+
+.view-report-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1F2532;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 5px;
+}
+
+.view-report-btn:hover {
+    background-color: #333C4D;
+    transform: scale(1.03);
+}
+
+.tracker-table .bad {
+    background-color: #FFB3B3;
+}
+
+.tracker-table {
+    font-weight: bold;
+}
+
+.tracker-table .medium {
+    background-color: #FFD580;
+}
+
+.tracker-table .good {
+    background-color: #90EE90;
+}
+
+/* Chat widget container */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Floating chat icon button */
+.chat-button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #1F2532;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.chat-button:hover {
+    background-color: #333C4D;
+}
+
+/* Chat box container */
+.chat-box {
+    display: none;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex-direction: column;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+}
+
+/* Chat box header */
+.chat-header {
+    background-color: #1F2532;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Chat content area */
+.chat-messages {
+    padding: 10px;
+    height: 150px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.bot-msg {
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    max-width: 85%;
+}
+
+/* Chat input area */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.chat-input button {
+    padding: 10px;
+    background-color: #1F2532;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.chat-input button:hover {
+    background-color: #333C4D;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+    .settings{
+        position: static;
+    }
+    .icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-btn img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .search-bar input {
+        font-size: 12px;
+    }
+
+    .search-bar button {
+        width: 30px;
+        height: 25px;
+    }
+
+    .tracker-table th,
+    .tracker-table td {
+        padding: 8px;
+    }
+
+    .view-report-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .chat-box {
+        width: 100%;
+        bottom: 60px;
+        right: 0;
+    }
+
+    .chat-messages {
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .search-bar input {
+        font-size: 10px;
+    }
+
+    .search-bar button {
+        width: 25px;
+        height: 20px;
+    }
+
+    .tracker-table th,
+    .tracker-table td {
+        padding: 6px;
+    }
+
+    .view-report-btn {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+
+    .chat-messages {
+        height: 80px;
+    }
+}

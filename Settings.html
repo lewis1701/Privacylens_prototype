@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PrivacyLens</title>
+  <link rel="stylesheet" href="Index.css">
+  <link rel="stylesheet" href="Settings.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Home button -->
+      <button class="icon-btn"><img src="icons/Home.svg" alt="Home" onclick="window.location.href='Index.html';"></button>
+      <!-- Reports button -->
+      <button class="icon-btn"><img src="icons/Analytics.svg" alt="Reports" onclick="window.location.href='Reports.html';"></button>
+      <!-- Settings button -->
+      <button class="icon-btn settings"><img src="icons/Settings.svg" alt="Settings" onclick="window.location.href='Settings.html';"></button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <h1>PrivacyLens</h1>
+        <img src="icons/Shield.svg" alt="Shield Icon" class="logo">
+      </div>
+      <div class="panel container">
+        <!-- UI Settings -->
+        <div class="setting container">
+          <div class="label-container">
+            <p class="settings-label">UI Settings</p>
+          </div>
+          <!-- Large Text Mode setting -->
+          <div class="setting-row">         
+            <span>Large Text Mode</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <!-- Toggle Sidebar setting -->
+          <div class="setting-row">         
+            <span>Toggle Sidebar</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <!-- Theme Selector dropdown -->
+          <label for="category">Select Theme:</label>
+          <select id="category" name="category">
+            <option value="Default">Default</option>
+            <option value="Dark Mode">Dark Mode</option>
+            <option value="Sunrise">Sunrise</option>
+            <option value="Ice">Ice</option>
+            <option value="Warm">Warm</option>
+          </select>
+        </div>
+        <!-- Scan Settings -->
+        <div class="setting container">
+          <div class="label-container">
+            <p class="settings-label">Scan Settings</p>
+          </div>
+          <label for="category">Default Scan Depth:</label>
+          <select id="category" name="category">
+            <option value="Default">1 Page</option>
+            <option value="Dark Mode">2 Pages</option>
+            <option value="Sunrise">3 Pages</option>
+            <option value="Ice">4 Pages</option>
+            <option value="Warm">5 Pages</option>
+          </select>
+          <div class="setting-row">         
+            <span>Javascript Scans</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="upload-section">
+            <label class="upload-btn">
+              Upload Tracker List
+            </label>
+            <input type="file" id="upload" accept=".csv,.json,.txt">
+          </div>
+        </div>
+        <!-- Reporting & Feedback Settings -->
+        <div class="setting container">
+          <div class="label-container">
+            <p class="settings-label">Reporting & Feedback Settings</p>
+          </div>
+          <div class="setting-row">         
+            <span>Privacy Score Tooltips</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <label for="category">Report Export Format:</label>
+          <select id="category" name="category">  
+            <option value="Default">CSV</option>
+            <option value="Dark Mode">PDF</option>
+            <option value="Sunrise">JSON</option>
+          </select>
+          <div class="setting-row">         
+            <span>Report Bugs</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

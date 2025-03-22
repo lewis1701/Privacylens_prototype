@@ -9,9 +9,12 @@
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
-      <button class="icon-btn"><img src="icons/Home.svg" alt="Home"></button>
-      <button class="icon-btn"><img src="icons/Analytics.svg" alt="Reports"></button>
-      <button class="icon-btn settings"><img src="icons/Settings.svg" alt="Settings"></button>
+      <!-- Home button -->
+      <button class="icon-btn"><img src="icons/Home.svg" alt="Home" onclick="window.location.href='Index.html';"></button>
+      <!-- Reports button -->
+      <button class="icon-btn"><img src="icons/Analytics.svg" alt="Reports" onclick="window.location.href='Reports.html';"></button>
+      <!-- Settings button -->
+      <button class="icon-btn settings"><img src="icons/Settings.svg" alt="Settings" onclick="window.location.href='Settings.html';"></button>
     </div>
 
     <!-- Main Content -->
@@ -33,19 +36,70 @@
         <thead>
           <tr>
             <th>URL</th>
-            <th>Tracker Name</th>
-            <th>Category</th>
-            <th>Company</th>
+            <th>Privacy Score</th>
+            <th>Trackers Detected</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          <!-- Dynamically filled via JS -->
+          <tr class="bad">
+            <td>www.youtube.com</td>
+            <td>Bad 27%</td>
+            <td>33</td>
+            <td><a href="report.html" class="view-report-btn">View Full Report</a></td>
+          </tr>
+          <tr class="medium">
+            <td>www.google.com</td>
+            <td>Medium 51%</td>
+            <td>17</td>
+            <td><a href="report.html" class="view-report-btn">View Full Report</a></td>
+          </tr>
+          <tr class="good">
+            <td>www.myuwe.ac.uk</td>
+            <td>Good 89%</td>
+            <td>6</td>
+            <td><a href="report.html" class="view-report-btn">View Full Report</a></td>
+          </tr>
         </tbody>
       </table>
 
-      <!-- Privacy Score -->
-      <div class="privacy-score">Overall Privacy Score: N/A</div>
+      <!-- Floating Chat Button -->
+      <div class="chat-widget">
+        <button id="chat-toggle" class="chat-button">
+          💬
+        </button>
+
+        <!-- Hidden Chat Box -->
+        <div id="chat-box" class="chat-box">
+          <div class="chat-header">
+            <span>PrivacyLens Assistant</span>
+            <button id="chat-close">✖</button>
+          </div>
+          <div class="chat-messages">
+            <p class="bot-msg">Hi! Need help understanding your privacy scan?</p>
+            <p class = "bot-msg">Or maybe you just want some tips on how to stay safe online?</p>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Type a message...">
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <script>
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatBox = document.getElementById("chat-box");
+    const closeChat = document.getElementById("chat-close");
+
+    chatToggle.addEventListener("click", () => {
+      chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
+    });
+
+    closeChat.addEventListener("click", () => {
+      chatBox.style.display = "none";
+    });
+  </script>
 </body>
 </html>

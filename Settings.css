@@ -1,0 +1,171 @@
+/* Style for each setting row */
+.setting-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    gap: 20px;
+    color: #1F2532;
+    font-weight: bold;
+}
+.main-content{
+    overflow: scroll;
+}
+
+/* Base switch style */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    border: 2px solid #1F2532;
+    border-radius: 15px;
+}
+
+/* Hide the checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider track */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #cccccc0f;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+/* Slider knob */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* When checked, move the knob and change color */
+.switch input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+/* Style for the panel container */
+.panel {
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the UI container */
+.setting {
+    justify-content: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid #1F2532;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    font-weight: bold;
+}
+
+/* Style for the settings label */
+.settings-label {
+    font-size: 1.5em;
+    margin: 0 auto;
+    justify-self: center;
+    height: 2em;
+    color: #1F2532;
+}
+
+/* Style for the select dropdown */
+select {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 2px solid #1F2532;
+    font-size: 14px;
+    background-color: white;
+    color: #1F2532;
+    margin-bottom: 15px;
+}
+
+/* Style for the label */
+label {
+    margin-right: 8px;
+    color: #1F2532;
+    font-size: 1.2em;
+}
+
+/* Style for the label container */
+.label-container {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    border-bottom: 4px solid #1F2532;
+    margin-bottom: 15px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .panel {
+        padding: 15px;
+    }
+
+    .setting {
+        padding: 15px;
+    }
+
+    .settings-label {
+        font-size: 1.3em;
+    }
+
+    .setting-row {
+        font-size: 1em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel {
+        padding: 10px;
+    }
+
+    .setting {
+        padding: 10px;
+    }
+
+    .settings-label {
+        font-size: 1.1em;
+    }
+
+    .setting-row {
+        font-size: 0.9em;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+}
