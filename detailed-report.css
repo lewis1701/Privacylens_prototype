@@ -1,0 +1,61 @@
+
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  #html-content {
+    background: #1e1e1e;
+    color: #e4e4e4;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    border: 1px solid #ddd;
+  }
+  
+  .tracker-highlight {
+    background-color: #fff3cd;
+    border: 1px dashed #ffc107;
+    padding: 4px;
+    margin: 2px 0;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #856404;
+  }
+  
+  .tracker-highlight:hover {
+    background-color: #ffeeba;
+  }
+  
+  .popup {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0)
+  }
+
+  .main-content{
+    overflow: scroll;
+  }
+
+  .view-report-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #1F2532;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: background-color 0.3s;
+  }
+  p{
+    color: #1F2532;
+    font-weight: bold;
+  }

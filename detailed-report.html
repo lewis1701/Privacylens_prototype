@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PrivacyLens</title>
+  <link rel="stylesheet" href="Index.css">
+  <title>Detailed Report – technewstoday.com</title>
+  <link rel="stylesheet" href="detailed-report.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Home button -->
+      <button class="icon-btn"><img src="Icons/Home.svg" alt="Home" onclick="window.location.href='Index.html';"></button>
+      <!-- Reports button -->
+      <button class="icon-btn"><img src="Icons/Analytics.svg" alt="Reports"></button>
+      <!-- Settings button -->
+      <button class="icon-btn settings"><img src="Icons/Settings.svg" alt="Settings" onclick="window.location.href='Settings.html';"></button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <h1>PrivacyLens</h1>
+        <img src="Icons/Shield.svg" alt="Shield Icon" class="logo">
+      </div>
+      <h2>Detailed HTML Report for: <span id="report-url">technewstoday.com</span></h2>
+      <p>This report displays the relevant trackers inside the scanned websites HTML code.<br>Click on each tracker for more information.</p>
+
+      <pre id="html-content"></pre>
+    
+      <div id="tracker-popup" class="popup" aria-live="polite"></div>
+    
+      <a href="reports.html" class="view-report-btn" aria-label="Back to reports">← Back to Reports</a>
+    
+      <script src="detailed-report.js"></script>
+      </div>
+      </div>
+
+      
+
+
+</body>
+</html>
