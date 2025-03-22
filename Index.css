@@ -313,15 +313,13 @@ body {
     }
 
     .chat-box {
-        width: 100%;
+        width: 90%;
         bottom: 60px;
-        right: 0;
+        right: 5%;
+        position: relative;
     }
 
-    .chat-messages {
-        height: 100px;
-    }
-}
+
 
 @media (max-width: 480px) {
     .header h1 {
@@ -347,7 +345,19 @@ body {
         font-size: 10px;
     }
 
-    .chat-messages {
-        height: 80px;
+    .chat-box {
+        width: 100%;
+        bottom: 60px;
+        right: 0;
+    }
+
+
+
+    .chat-input input {
+        font-size: 12px;
+    }
+
+    .chat-input button {
+        font-size: 12px;
     }
 }
