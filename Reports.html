@@ -10,185 +10,177 @@
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
-        <!-- Home button -->
-        <button class="icon-btn"><img src="icons/Home.svg" alt="Home" onclick="window.location.href='Index.html';"></button>
-        <!-- Reports button -->
-        <button class="icon-btn"><img src="icons/Analytics.svg" alt="Reports"></button>
-        <!-- Settings button -->
-        <button class="icon-btn settings"><img src="icons/Settings.svg" alt="Settings" onclick="window.location.href='Settings.html';"></button>
-      </div>
+      <!-- Home button -->
+      <button class="icon-btn"><img src="icons/Home.svg" alt="Home" onclick="window.location.href='Index.html';"></button>
+      <!-- Reports button -->
+      <button class="icon-btn"><img src="icons/Analytics.svg" alt="Reports"></button>
+      <!-- Settings button -->
+      <button class="icon-btn settings"><img src="icons/Settings.svg" alt="Settings" onclick="window.location.href='Settings.html';"></button>
+    </div>
 
     <!-- Main Content -->
     <div class="main-content">
-        <div class="header">
-            <h1>PrivacyLens</h1>
-            <img src="icons/Shield.svg" alt="Shield Icon" class="logo">
-          </div>
-        <h2>Previous Scans</h2>
-        <div class="scan-list">
-      
-          <!-- Scan 1: YouTube -->
-          <div class="scan-item bad">
-            <div class="scan-header" onclick="toggleDetails(this)">
-              <span><strong>www.youtube.com</strong> - Bad (27%)</span>
-              <span>33 Trackers</span>
-            </div>
-            <div class="scan-details">
-              <p><strong>Category Breakdown:</strong></p>
-              <ul>
-                <li>Advertising: 15</li>
-                <li>Analytics: 8</li>
-                <li>Social Media: 6</li>
-                <li>Other: 4</li>
-              </ul>
-      
-              <p><strong>Notable Trackers:</strong></p>
-              <ul class = "trackers">
-                <li><strong>DoubleClick</strong> (Google) – <em>Advertising</em><br>
-                  Tracks ad impressions and behavior across domains. <br>
-                  <strong>Risk:</strong> High | <strong>Consent:</strong> ❌ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
-                </li>
-                <li><strong>Facebook Pixel</strong> (Meta) – <em>Social Media</em><br>
-                  Tracks user behavior for retargeting ads on Facebook.<br>
-                  <strong>Risk:</strong> High | <strong>Consent:</strong> ❌ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Image Beacon
-                </li>
-                <li><strong>Google Tag Manager</strong> – <em>Analytics</em><br>
-                  Deploys multiple tracking scripts dynamically.<br>
-                  <strong>Risk:</strong> Moderate | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
-                </li>
-              </ul>
-      
-              <p><strong>Insights:</strong></p>
-              <ul>
-                <li>70% of trackers ignore Do Not Track (DNT) requests.</li>
-                <li>Most trackers load early without waiting for user consent.</li>
-                <li>Heavy use of third-party scripts and cross-site tracking.</li>
-              </ul>
-      
-              <a href="report.html" class="view-report-btn">View Full Report</a>
-            </div>
-          </div>
-      
-          <!-- Scan 2: Google -->
-          <div class="scan-item medium">
-            <div class="scan-header" onclick="toggleDetails(this)">
-              <span><strong>www.google.com</strong> - Medium (51%)</span>
-              <span>17 Trackers</span>
-            </div>
-            <div class="scan-details">
-              <p><strong>Category Breakdown:</strong></p>
-              <ul>
-                <li>Analytics: 9</li>
-                <li>Advertising: 5</li>
-                <li>Other: 3</li>
-              </ul>
-      
-              <p><strong>Notable Trackers:</strong></p>
-              <ul class = "trackers">
-                <li><strong>Google Analytics</strong> – <em>Analytics</em><br>
-                  Tracks pageviews, session length, and bounce rate.<br>
-                  <strong>Risk:</strong> Moderate | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
-                </li>
-                <li><strong>AdSense</strong> – <em>Advertising</em><br>
-                  Displays targeted ads based on browsing behavior.<br>
-                  <strong>Risk:</strong> High | <strong>Consent:</strong> ❌ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
-                </li>
-                <li><strong>Tag Manager</strong> – <em>Analytics / Container</em><br>
-                  Injects multiple trackers through a central tag manager.<br>
-                  <strong>Risk:</strong> Moderate | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
-                </li>
-              </ul>
-      
-              <p><strong>Insights:</strong></p>
-              <ul>
-                <li>Some trackers respect consent settings, but not DNT.</li>
-                <li>Most data collected remains within Google’s ecosystem.</li>
-                <li>Tag Manager is used to dynamically load other scripts post-load.</li>
-              </ul>
-      
-              <a href="report.html" class="view-report-btn">View Full Report</a>
-            </div>
-          </div>
-      
-          <!-- Scan 3: MyUWE -->
-          <div class="scan-item good">
-            <div class="scan-header" onclick="toggleDetails(this)">
-              <span><strong>www.myuwe.ac.uk</strong> - Good (89%)</span>
-              <span>6 Trackers</span>
-            </div>
-            <div class="scan-details">
-              <p><strong>Category Breakdown:</strong></p>
-              <ul>
-                <li>Analytics: 4</li>
-                <li>Essential: 2</li>
-              </ul>
-      
-              <p><strong>Notable Trackers:</strong></p>
-              <ul class = "trackers">
-                <li><strong>Matomo</strong> – <em>Privacy-first Analytics</em><br>
-                  Self-hosted analytics respecting user privacy and DNT.<br>
-                  <strong>Risk:</strong> Low | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ✅ | <strong>Method:</strong> Script
-                </li>
-                <li><strong>UWE Session Tracker</strong> – <em>Internal</em><br>
-                  Tracks login timeouts and navigation history.<br>
-                  <strong>Risk:</strong> Low | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ✅ | <strong>Method:</strong> Script
-                </li>
-              </ul>
-      
-              <p><strong>Insights:</strong></p>
-              <ul>
-                <li>No third-party or advertising trackers detected.</li>
-                <li>All analytics are privacy-focused and consent-aware.</li>
-                <li>Excellent use of open-source tracking tools with transparency.</li>
-              </ul>
-      
-              <a href="report.html" class="view-report-btn">View Full Report</a>
-            </div>
-          </div>
-          <span class="expand-hint">(Click to expand)</span>
-        </div>
+      <!-- Header -->
+      <div class="header">
+        <h1>PrivacyLens</h1>
+        <img src="icons/Shield.svg" alt="Shield Icon" class="logo">
       </div>
-       <!-- Floating Chat Button -->
-       <div class="chat-widget">
-        <button id="chat-toggle" class="chat-button">
-          💬
-        </button>
+      <h2>Previous Scans</h2>
+      <div class="scan-list">
+        <!-- Scan 1: YouTube -->
+        <div class="scan-item bad">
+          <div class="scan-header" onclick="toggleDetails(this)">
+            <span><strong>www.youtube.com</strong> - Bad (27%)</span>
+            <span>33 Trackers</span>
+          </div>
+          <div class="scan-details">
+            <p><strong>Category Breakdown:</strong></p>
+            <ul>
+              <li>Advertising: 15</li>
+              <li>Analytics: 8</li>
+              <li>Social Media: 6</li>
+              <li>Other: 4</li>
+            </ul>
+            <p><strong>Notable Trackers:</strong></p>
+            <ul class="trackers">
+              <li><strong>DoubleClick</strong> (Google) – <em>Advertising</em><br>
+                Tracks ad impressions and behavior across domains. <br>
+                <strong>Risk:</strong> High | <strong>Consent:</strong> ❌ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
+              </li>
+              <li><strong>Facebook Pixel</strong> (Meta) – <em>Social Media</em><br>
+                Tracks user behavior for retargeting ads on Facebook.<br>
+                <strong>Risk:</strong> High | <strong>Consent:</strong> ❌ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Image Beacon
+              </li>
+              <li><strong>Google Tag Manager</strong> – <em>Analytics</em><br>
+                Deploys multiple tracking scripts dynamically.<br>
+                <strong>Risk:</strong> Moderate | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
+              </li>
+            </ul>
+            <p><strong>Insights:</strong></p>
+            <ul>
+              <li>70% of trackers ignore Do Not Track (DNT) requests.</li>
+              <li>Most trackers load early without waiting for user consent.</li>
+              <li>Heavy use of third-party scripts and cross-site tracking.</li>
+            </ul>
+            <a href="reports.html" class="view-report-btn">Export Report</a>
+          </div>
+        </div>
 
-        <!-- Hidden Chat Box -->
-        <div id="chat-box" class="chat-box">
-          <div class="chat-header">
-            <span>PrivacyLens Assistant</span>
-            <button id="chat-close">✖</button>
+        <!-- Scan 2: Google -->
+        <div class="scan-item medium">
+          <div class="scan-header" onclick="toggleDetails(this)">
+            <span><strong>www.google.com</strong> - Medium (51%)</span>
+            <span>17 Trackers</span>
           </div>
-          <div class="chat-messages">
-            <p class="bot-msg">Hi! Need help understanding your privacy scan?</p>
-            <p class = "bot-msg">Or maybe you just want some tips on how to stay safe online?</p>
+          <div class="scan-details">
+            <p><strong>Category Breakdown:</strong></p>
+            <ul>
+              <li>Analytics: 9</li>
+              <li>Advertising: 5</li>
+              <li>Other: 3</li>
+            </ul>
+            <p><strong>Notable Trackers:</strong></p>
+            <ul class="trackers">
+              <li><strong>Google Analytics</strong> – <em>Analytics</em><br>
+                Tracks pageviews, session length, and bounce rate.<br>
+                <strong>Risk:</strong> Moderate | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
+              </li>
+              <li><strong>AdSense</strong> – <em>Advertising</em><br>
+                Displays targeted ads based on browsing behavior.<br>
+                <strong>Risk:</strong> High | <strong>Consent:</strong> ❌ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
+              </li>
+              <li><strong>Tag Manager</strong> – <em>Analytics / Container</em><br>
+                Injects multiple trackers through a central tag manager.<br>
+                <strong>Risk:</strong> Moderate | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ❌ | <strong>Method:</strong> Script
+              </li>
+            </ul>
+            <p><strong>Insights:</strong></p>
+            <ul>
+              <li>Some trackers respect consent settings, but not DNT.</li>
+              <li>Most data collected remains within Google’s ecosystem.</li>
+              <li>Tag Manager is used to dynamically load other scripts post-load.</li>
+            </ul>
+            <a href="reports.html" class="view-report-btn">Export Report</a>
           </div>
-          <div class="chat-input">
-            <input type="text" placeholder="Type a message...">
-            <button>Send</button>
+        </div>
+
+        <!-- Scan 3: MyUWE -->
+        <div class="scan-item good">
+          <div class="scan-header" onclick="toggleDetails(this)">
+            <span><strong>www.myuwe.ac.uk</strong> - Good (89%)</span>
+            <span>6 Trackers</span>
           </div>
+          <div class="scan-details">
+            <p><strong>Category Breakdown:</strong></p>
+            <ul>
+              <li>Analytics: 4</li>
+              <li>Essential: 2</li>
+            </ul>
+            <p><strong>Notable Trackers:</strong></p>
+            <ul class="trackers">
+              <li><strong>Matomo</strong> – <em>Privacy-first Analytics</em><br>
+                Self-hosted analytics respecting user privacy and DNT.<br>
+                <strong>Risk:</strong> Low | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ✅ | <strong>Method:</strong> Script
+              </li>
+              <li><strong>UWE Session Tracker</strong> – <em>Internal</em><br>
+                Tracks login timeouts and navigation history.<br>
+                <strong>Risk:</strong> Low | <strong>Consent:</strong> ✅ | <strong>DNT:</strong> ✅ | <strong>Method:</strong> Script
+              </li>
+            </ul>
+            <p><strong>Insights:</strong></p>
+            <ul>
+              <li>No third-party or advertising trackers detected.</li>
+              <li>All analytics are privacy-focused and consent-aware.</li>
+              <li>Excellent use of open-source tracking tools with transparency.</li>
+            </ul>
+            <a href="reports.html" class="view-report-btn">Export Report</a>
+          </div>
+        </div>
+        <span class="expand-hint">(Click to expand)</span>
+      </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <div class="chat-widget">
+      <button id="chat-toggle" class="chat-button">
+        💬
+      </button>
+
+      <!-- Hidden Chat Box -->
+      <div id="chat-box" class="chat-box">
+        <div class="chat-header">
+          <span>PrivacyLens Assistant</span>
+          <button id="chat-close">✖</button>
+        </div>
+        <div class="chat-messages">
+          <p class="bot-msg">Hi! Need help understanding your privacy scan?</p>
+          <p class="bot-msg">Or maybe you just want some tips on how to stay safe online?</p>
+        </div>
+        <div class="chat-input">
+          <input type="text" placeholder="Type a message...">
+          <button>Send</button>
         </div>
       </div>
     </div>
   </div>
-      <script>
-        const chatToggle = document.getElementById("chat-toggle");
-        const chatBox = document.getElementById("chat-box");
-        const closeChat = document.getElementById("chat-close");
 
-        chatToggle.addEventListener("click", () => {
-            chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
-        });
+  <script>
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatBox = document.getElementById("chat-box");
+    const closeChat = document.getElementById("chat-close");
 
-        closeChat.addEventListener("click", () => {
-            chatBox.style.display = "none";
-        });
-        function toggleDetails(element) {
-          const details = element.nextElementSibling;
-          details.style.display = (details.style.display === 'block') ? 'none' : 'block';
-        }
-      </script>
-      
+    chatToggle.addEventListener("click", () => {
+      chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
+    });
+
+    closeChat.addEventListener("click", () => {
+      chatBox.style.display = "none";
+    });
+
+    function toggleDetails(element) {
+      const details = element.nextElementSibling;
+      details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
